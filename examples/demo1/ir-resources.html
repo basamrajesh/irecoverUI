@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>iRecover - Spread Positivity</title>
+    <meta content='width=device-width, initial-scale=1.0, shrink-to-fit=no' name='viewport' />
+    <link rel="icon" href="../assets/img/icon.ico" type="image/x-icon" />
+
+    <!-- Fonts and icons -->
+    <script src="../assets/js/plugin/webfont/webfont.min.js"></script>
+    <script>
+        WebFont.load({
+            google: { "families": ["Lato:300,400,700,900"] },
+            custom: { "families": ["Flaticon", "Font Awesome 5 Solid", "Font Awesome 5 Regular", "Font Awesome 5 Brands", "simple-line-icons"], urls: ['../assets/css/fonts.min.css'] },
+            active: function () {
+                sessionStorage.fonts = true;
+            }
+        });
+    </script>
+
+    <!-- CSS Files -->
+    <link rel="stylesheet" href="../assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../assets/css/atlantis.min.css">
+
+    <!-- CSS Just for demo purpose, don't include it in your project -->
+    <link rel="stylesheet" href="../assets/css/demo.css">
+    <!-- JS Files -->
+</head>
+
+<body>
+    <div class="wrapper">
+        <header-component></header-component>
+        <!-- End Sidebar -->
+
+        <div class="main-panel">
+            <div class="content">
+                <div class="page-inner">
+                    <div class="page-home container">
+                        <div class="tabsinfo">
+                            <div class="card">
+                                <div class="card-body">
+                                    <ul class="nav nav-pills nav-primary  nav-pills-no-bd nav-pills-icons justify-content-center"
+                                        id="pills-tab-with-icon" role="tablist">
+                                        <li class="nav-item">
+                                            <a class="nav-link" id="pills-home-tab-icon" data-toggle="pill"
+                                                href="#pills-home-icon" role="tab" aria-controls="pills-home-icon"
+                                                aria-selected="false">
+                                                <i class="fa fa-mobile"></i>
+                                                Contacts
+                                            </a>
+                                        </li>
+                                        <li class="nav-item submenu">
+                                            <a class="nav-link active show" id="pills-profile-tab-icon"
+                                                data-toggle="pill" href="#pills-profile-icon" role="tab"
+                                                aria-controls="pills-profile-icon" aria-selected="true">
+                                                <i class="fa fa-hospital"></i>
+                                                Beds
+                                            </a>
+                                        </li>
+                                        <li class="nav-item submenu">
+                                            <a class="nav-link" id="pills-contact-tab-icon" data-toggle="pill"
+                                                href="#pills-contact-icon" role="tab" aria-controls="pills-contact-icon"
+                                                aria-selected="false">
+                                                <i class="flaticon-mailbox"></i>
+                                                Links
+                                            </a>
+                                        </li>
+                                    </ul>
+                                    <div class="tab-content mt-2 mb-3" id="pills-with-icon-tabContent">
+                                        <div class="tab-pane fade" id="pills-home-icon" role="tabpanel"
+                                            aria-labelledby="pills-home-tab-icon">
+                                            <div class="row" id="contact-info">
+                                            </div>
+                                        </div>
+                                        <div class="tab-pane fade active show" id="pills-profile-icon" role="tabpanel"
+                                            aria-labelledby="pills-profile-tab-icon">
+                                            <div class="row" id="beds-available">
+                                            </div>
+                                        </div>
+                                        <div class="tab-pane fade" id="pills-contact-icon" role="tabpanel"
+                                            aria-labelledby="pills-contact-tab-icon">
+                                            <div class="row" id="links-data">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <hr>
+                        <div class="iframe-map">
+                            <iframe class="frame" src="https://covidbedsindia.in/"
+                                style="height:1000px;width:100%;border:none;overflow:show;" id="myFrame" frameborder="0"
+                                marginwidth="0" marginheight="0" scrolling="no"></iframe>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <script src="../assets/js/header.js"></script>
+    <script src="../assets/js/leads.js"></script>
+    <!--   Core JS Files   -->
+    <script src="https://unpkg.com/vue@3.0.5"></script>
+    <script src="../assets/js/core/jquery.3.2.1.min.js"></script>
+    <script src="../assets/js/core/popper.min.js"></script>
+    <script src="../assets/js/core/bootstrap.min.js"></script>
+
+    <!-- jQuery UI -->
+    <script src="../assets/js/plugin/jquery-ui-1.12.1.custom/jquery-ui.min.js"></script>
+    <script src="../assets/js/plugin/jquery-ui-touch-punch/jquery.ui.touch-punch.min.js"></script>
+
+    <!-- jQuery Scrollbar -->
+    <script src="../assets/js/plugin/jquery-scrollbar/jquery.scrollbar.min.js"></script>
+
+
+    <!-- Chart JS -->
+    <script src="../assets/js/plugin/chart.js/chart.min.js"></script>
+
+    <!-- jQuery Sparkline -->
+    <script src="../assets/js/plugin/jquery.sparkline/jquery.sparkline.min.js"></script>
+
+    <!-- Chart Circle -->
+    <script src="../assets/js/plugin/chart-circle/circles.min.js"></script>
+
+    <!-- Datatables -->
+    <script src="../assets/js/plugin/datatables/datatables.min.js"></script>
+
+    <!-- Bootstrap Notify -->
+    <script src="../assets/js/plugin/bootstrap-notify/bootstrap-notify.min.js"></script>
+
+    <!-- jQuery Vector Maps -->
+    <script src="../assets/js/plugin/jqvmap/jquery.vmap.min.js"></script>
+    <script src="../assets/js/plugin/jqvmap/maps/jquery.vmap.world.js"></script>
+
+    <!-- Sweet Alert -->
+    <script src="../assets/js/plugin/sweetalert/sweetalert.min.js"></script>
+
+    <!-- Atlantis JS -->
+    <script src="../assets/js/atlantis.min.js"></script>
+    <script>
+        var path = window.location.pathname.split('demo1/');
+
+        if (path.length === 2) {
+            $('.maps').addClass('active');
+        }
+    </script>
+</body>
+
+</html>

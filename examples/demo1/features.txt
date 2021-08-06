@@ -1,0 +1,54 @@
+Signup
+Maps
+Blog
+Leads
+profiles
+Qns
+Qn & Ans
+
+
+{
+  "id": 5,
+  "name": "MaheshBabu",
+  "password": "qc6aNFXQ24IANp562rMmyQ==",
+  "email": "mb@gmail.com",
+  "genderType": "MALE",
+  "userType": "DEFAULT",
+  "diseaseType": "COVID",
+  "country": "India",
+  "state": "Telangana",
+  "zipCode": "500035",
+  "latitude": 0,
+  "longitude": 0
+}
+
+
+ankit:
+With the ongoing pandemic the fight never seems to end. This fight is not only with the disease, but it is also mental, financial and physical. 
+On April 2021 I tested positive for COVID-19. The first few days were like any normal flu, I had symptoms like fever, headache and sore throat. The pain was manageable and I started on all the medication that was recommended by my doctor. Steam inhalation was more of a ritual than taking bath. The fight with this was not just physical, it was also mental. Praying that the disease doesn’t spread to the lungs, getting news updates everyday as to how the situation was worsening etc has more impact to your mental health than that is reported. Not having the ability to meet friends, move about in your own home, made the process of keeping a light mind harder. 
+After a week when I thought the worse was me, the symptoms resurfaced. This was extremely worrying or at least I thought it was as this was what the news channels kept reporting. Through mild interactions with friends and various sitcoms available the journey to recovery was a little easy. 
+
+
+Archana: 
+Hi Everyone, 
+An interesting area of our app would be Recovered Patient stories page where you would learn what to expect if you have been diagnosed with Covid19 where patients recount their personal experiences with coronavirus and the care, challenges and information they received and gone through.
+My name is Archana Singh. I am from Delhi and I am 38 years old. I am recovered Covid patient from Optum. And here is my story of Recovery and experience in Hospital.
+I tested Positive on 26th April’2021. So initially I was quarantine at home for few days and started taking multivitamins on doctor’s consultation but on 6th day my Oxygen level went down to 89-90 and I had difficulty in breathing. So doctor suggested me to admit in the Hospital immediately. Here the biggest challenge was to get bed in hospital on time. Luckily I got bed on time in Venkateshwar Hospital, Delhi where I first went for the Citi Scan and my score was 14/25 moderate. 
+         Then they started giving me Oxygen, Remdesiver Injections and Steriod but still I had a breathing problem, so doctor suggested my family to arrange Plasma of 2 donors which we got it from Hospitals blood bank. Then on 4th day in Hospital I started recovering and my oxygen level was above 95. I stayed in Hospital for 8 days.
+For my Recovery first I want to thank all the Doctors, Nurses and Hospital staff for taking care so nicely whenever required and who has arranged medicines, injections, Plasma on time. Then I want to thank my Family, Friends, Colleagues who has supported me alot during this tough time both mentally and physically. And lastly I want to Thank Optum for giving me cashless benefits of Hospitalization. 
+         There are many people who went to the same situation or even more critical and many active Covid patients are looking for the moral boostup. That’s why we are bringing many Recovered Stories in this manner through iRecover app.
+
+
+Do I need to tell story highlights also? 
+For e.g.
+
+Few Story Highlights are :-
+•	Elsa, four months pregnant with her first baby, became ill with COVID-19 and was treated at The Johns Hopkins Hospital.
+•	A multidisciplinary team, including intensive care specialists and obstetricians such as Andrew Satin, M.D., cared for Elsa and her unborn baby.
+•	In August 2020, Elsa gave birth to a healthy baby girl.
+Some other stories headings would be - 
+-	It didn’t kill me, I came out stronger.
+A nurse contracted covid-19 from one of his patients, recovered and returned to work with much more resolve and compassion.
+-	I felt chills down my spine – Will I survive this?
+-	Getting strong. Again after Covid-19
+

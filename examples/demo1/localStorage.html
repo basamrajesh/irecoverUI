@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Local Storage</title>
+</head>
+
+<body>
+    <h2> Local Storage</h2>
+
+    <fieldset>
+        <input type="text" name="username" id="username">
+        <input type="password" name="password" id="password">
+        <button class="btn btn-primary" id="btnInsert" type="submit">Submit</button>
+    </fieldset>
+
+    <fieldset>
+        <h3>Data</h3>
+        <div id="lsoutput">
+
+        </div>
+    </fieldset>
+
+    <Script>
+        var userName = document.getElementById("username")
+        var password = document.getElementById("password")
+        var submitButton = document.getElementById("btnInsert")
+        const outputData = document.getElementById("lsoutput")
+
+        submitButton.onclick = function () {
+            const key = userName.value;
+            const value = password.value;
+            console.log(key);
+            console.log(value);
+            if (key && value) {
+                localStorage.setItem(key, value);
+                location.reload();
+            }
+        }
+        for (let index = 0; index < localStorage.length; index++) {
+            const key = localStorage.key(index);
+            const value = localStorage.getItem(key);
+            outputData.innerHTML += `${key}:  ${value} <br/>`
+
+        }
+        console.log(localStorage);
+
+    </Script>
+</body>
+
+</html>

@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>iRecover - Spread Positivity</title>
+    <meta content='width=device-width, initial-scale=1.0, shrink-to-fit=no' name='viewport' />
+    <link rel="icon" href="../assets/img/icon.ico" type="image/x-icon" />
+
+    <!-- Fonts and icons -->
+    <script src="../assets/js/plugin/webfont/webfont.min.js"></script>
+    <script>
+        WebFont.load({
+            google: { "families": ["Lato:300,400,700,900"] },
+            custom: { "families": ["Flaticon", "Font Awesome 5 Solid", "Font Awesome 5 Regular", "Font Awesome 5 Brands", "simple-line-icons"], urls: ['../assets/css/fonts.min.css'] },
+            active: function () {
+                sessionStorage.fonts = true;
+            }
+        });
+    </script>
+
+    <!-- CSS Files -->
+    <link rel="stylesheet" href="../assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../assets/css/atlantis.min.css">
+
+    <!-- CSS Just for demo purpose, don't include it in your project -->
+    <link rel="stylesheet" href="../assets/css/demo.css">
+    <!-- JS Files -->
+    <script src="../assets/js/header.js"></script>
+    <script src="../assets/js/footer.js"></script>
+</head>
+
+<body>
+    <div class="wrapper">
+        <header-component></header-component>
+        <!-- End Sidebar -->
+        <div class="main-panel">
+            <div class="content">
+                <div class="ir-banner">
+                    <div class="p-4 p-md-5 mb-4 text-white" style="background-color: #1269db !important;">
+                        <div class="col-md-12 px-0">
+                            <h1 class="display-3"> <b>IRECOVER</b></h1>
+                            <h3 class="display-4" style=" text-transform: uppercase;">Add <b>Positivity</b> to your
+                                Isolation
+                            </h3>
+                        </div>
+                    </div>
+                </div>
+                <div class="ir-tiles container">
+                    <h2 style=" text-transform: uppercase;">in a nutshell</h2>
+                    <hr>
+                    <div class="row justify-content-center align-items-center mb-5">
+                        <div class="col-md-4 pl-md-0">
+                            <div class="card-pricing2 card-success">
+                                <div class="pricing-header">
+                                    <h3 class="fw-bold">Recovered</h3>
+                                    <!-- <span class="sub-title">Lorem ipsum</span> -->
+                                </div>
+                                <div class="ir-cases">
+
+                                </div>
+                                <a href="../demo1/ir-home.html"
+                                    class="btn btn-success btn-border btn-lg w-75 fw-bold mb-3">Know more</a>
+                            </div>
+                        </div>
+                        <div class="col-md-4 pl-md-0 pr-md-0">
+                            <div class="card-pricing2 card-warning">
+                                <div class="pricing-header">
+                                    <h3 class="fw-bold">Recovered Stories</h3>
+                                    <!-- <span class="sub-title">Lorem ipsum</span> -->
+                                </div>
+                                <div class="price-value">
+                                    <div class="value">
+                                        <span class="amount">5</span>
+                                        <span class="month">new</span>
+                                    </div>
+                                </div>
+                                <ul class="pricing-content">
+                                </ul>
+                                <a href="../demo1/ir-stories.html"
+                                    class="btn btn-warning btn-border btn-lg w-75 fw-bold mb-3">Know more</a>
+                            </div>
+                        </div>
+                        <div class="col-md-4 pr-md-0">
+                            <div class="card-pricing2 card-secondary">
+                                <div class="pricing-header">
+                                    <h3 class="fw-bold">Predictive Recommendations</h3>
+                                    <!-- <span class="sub-title">Lorem ipsum</span> -->
+                                </div>
+                                <div class="price-value">
+                                    <div class="value">
+
+                                        <span class="amount">3</span>
+                                        <span class="month">new</span>
+                                    </div>
+                                </div>
+                                <ul class="pricing-content">
+                                </ul>
+                                <a href="../demo1/ir-analysis.html"
+                                    class="btn btn-secondary btn-border btn-lg w-75 fw-bold mb-3">Know more</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <h2 style=" text-transform: uppercase;">Recent Recoveries</h2>
+                    <hr>
+                    <div class="users row" id="user-area">
+                    </div>
+                    <hr>
+                    <h2>Recent Recovered Stories</h2>
+                    <hr>
+                    <div class="row" id="ir-stories-card">
+                        <div>
+
+                        </div>
+                    </div>
+
+                    <div class="row justify-content-center align-items-center mb-1">
+                        <div class="card col-md-12">
+                            <div class="card-body">
+                                <h5 class="card-title">Too Many Questions?</h5>
+                                <p class="card-text">Answers to them are just a click away...</p>
+                                <a href="../demo1/ir-qa.html" class="btn btn-primary">Go there</a>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- <h2 style=" text-transform: uppercase;">in a qns</h2> -->
+                </div>
+            </div>
+            <footer-component></footer-component>
+        </div>
+
+    </div>
+    <!--   Core JS Files   -->
+    <script src="../assets/js/core/jquery.3.2.1.min.js"></script>
+    <script src="../assets/js/core/popper.min.js"></script>
+    <script src="../assets/js/core/bootstrap.min.js"></script>
+
+    <!-- jQuery UI -->
+    <script src="../assets/js/plugin/jquery-ui-1.12.1.custom/jquery-ui.min.js"></script>
+    <script src="../assets/js/plugin/jquery-ui-touch-punch/jquery.ui.touch-punch.min.js"></script>
+
+    <!-- jQuery Scrollbar -->
+    <script src="../assets/js/plugin/jquery-scrollbar/jquery.scrollbar.min.js"></script>
+
+
+    <!-- Chart JS -->
+    <script src="../assets/js/plugin/chart.js/chart.min.js"></script>
+
+    <!-- jQuery Sparkline -->
+    <script src="../assets/js/plugin/jquery.sparkline/jquery.sparkline.min.js"></script>
+
+    <!-- Chart Circle -->
+    <script src="../assets/js/plugin/chart-circle/circles.min.js"></script>
+
+    <!-- Datatables -->
+    <script src="../assets/js/plugin/datatables/datatables.min.js"></script>
+
+    <!-- Bootstrap Notify -->
+    <script src="../assets/js/plugin/bootstrap-notify/bootstrap-notify.min.js"></script>
+
+    <!-- jQuery Vector Maps -->
+    <script src="../assets/js/plugin/jqvmap/jquery.vmap.min.js"></script>
+    <script src="../assets/js/plugin/jqvmap/maps/jquery.vmap.world.js"></script>
+
+    <!-- Sweet Alert -->
+    <script src="../assets/js/plugin/sweetalert/sweetalert.min.js"></script>
+
+    <!-- Atlantis JS -->
+    <script src="../assets/js/atlantis.min.js"></script>
+    <script>
+        var path = window.location.pathname.split('demo1/');
+
+        if (path.length === 2) {
+            $('.dashboard').addClass('active');
+        }
+
+        fetch('https://api.apify.com/v2/key-value-stores/toDWvRj1JpTXiM8FF/records/LATEST')
+            .then(response => response.json())
+            .then(data => {
+                console.log(data);
+                document.querySelector('.ir-cases').innerHTML += `
+                
+                <div class="price-value">
+                                    <div class="value">
+                                        <span class="amount">${data.recoveredNew}</span>
+                                        <span class="month">new</span>
+                                    </div>
+                                </div>
+                                <ul class="pricing-content">
+                                </ul>
+
+                `
+            });
+        var baseUrl = 'https://cors-anywhere.herokuapp.com/http://ec2-65-0-181-95.ap-south-1.compute.amazonaws.com:7878';
+        fetch(baseUrl + '/api/user/list')
+            .then(response => response.json())
+            .then(responseData => {
+                console.log(responseData);
+                responseData.slice(0, 6).forEach(user => {
+                    if (user.userType == "PASSIVE") {
+                        document.getElementById('user-area').innerHTML += ` <div class="col-md-3 userindv">
+							<div class="card card-profile">
+								<div class="card-header" style="height:60px !important;">
+									<div class="profile-picture">
+										<div class="avatar avatar-xl">
+											<img src="${user.profileImageUrl}" alt="..." class="avatar-img rounded-circle">
+										</div>
+									</div>
+								</div>
+								<div class="card-body">
+									<div class="user-profile text-center">
+										<div class="name" id="username" style="text-transform: capitalize;">${user.name}</div>
+										<div class="desc">${user.email}</div>	
+										<div class="view-profile" data-id=${user.id}>
+											<a href="../demo1/ir-induser.html" id="detailView" class="btn btn-primary btn-block">View Full Profile</a>
+										</div>								
+									</div>
+								</div>
+							</div>
+						</div>`
+                    }
+                });
+            });
+        console.log(localStorage);
+
+        let rawResponse = fetch('https://cors-anywhere.herokuapp.com/https://irecovered.herokuapp.com/checkForSeverity', {
+            method: 'POST',
+            headers: {
+                'Accept': 'application/json',
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify({
+                "Breathing Problem": "0",
+                "Fever": "0",
+                "Dry Cough": "0",
+                "Sore throat": "0",
+                "Running Nose": "0",
+                "Asthma": "0",
+                "Chronic Lung Disease": "1",
+                "Headache": "1",
+                "Heart Disease": "1",
+                "Diabetes": "1",
+                "Hyper Tension": "1",
+                "Fatigue ": "1",
+                "Gastrointestinal ": "1",
+                "Abroad travel": "0",
+                "Contact with COVID Patient": "1",
+                "Attended Large Gathering": "0",
+                "Visited Public Exposed Places": "1",
+                "Family working in Public Exposed Places": "1",
+                "Wearing Masks": "0",
+                "Sanitization from Market": "0"
+            })
+
+        });
+        fetch("https://irecovered.herokuapp.com/checkForSeverity", {
+            method: "POST",
+            headers: {
+                'Accept': 'application/json',
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify({
+                "Breathing Problem": "0",
+                "Fever": "0",
+                "Dry Cough": "0",
+                "Sore throat": "0",
+                "Running Nose": "0",
+                "Asthma": "0",
+                "Chronic Lung Disease": "1",
+                "Headache": "1",
+                "Heart Disease": "1",
+                "Diabetes": "1",
+                "Hyper Tension": "1",
+                "Fatigue ": "1",
+                "Gastrointestinal ": "1",
+                "Abroad travel": "0",
+                "Contact with COVID Patient": "1",
+                "Attended Large Gathering": "0",
+                "Visited Public Exposed Places": "1",
+                "Family working in Public Exposed Places": "1",
+                "Wearing Masks": "0",
+                "Sanitization from Market": "0"
+            })
+        }).then(res => res.text())
+            .then(data => console.log(data));
+
+
+        // Stories
+
+        fetch(baseUrl + '/api/suggestions/recoveredlist?hashTag=fever')
+            .then(response => response.json())
+            .then(data => {
+                console.log(data);
+                data.slice(0, 3).forEach(story => {
+
+                    document.getElementById('ir-stories-card').innerHTML += `
+                    <div class="col-md-4">
+                                <div class="card card-post card-round">
+                                    <img class="card-img-top" src="${story.profileImageUrl}" alt="Card image cap" style="height: 200px">
+                                    <div class="card-body">
+                                        <div class="d-flex">
+                                            <div class="info-post ml-2">
+                                                <p class="username">by: <b>${story.userId.name}</b></p>
+                                            </div>
+                                        </div>
+                                        <div class="separator-solid"></div>
+                                        <h3 class="card-title">
+                                            <a href="#">
+                                                ${story.title}
+                                            </a>
+                                        </h3>
+                                    </div>
+                                </div>
+                            </div>
+                    `
+
+                });
+            })
+    </script>
+</body>
+
+</html>

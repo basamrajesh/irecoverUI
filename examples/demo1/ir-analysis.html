@@ -1,0 +1,1138 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>IR Analysis</title>
+    <meta content='width=device-width, initial-scale=1.0, shrink-to-fit=no' name='viewport' />
+    <link rel="icon" href="../../assets/img/icon.ico" type="image/x-icon" />
+
+    <!-- Fonts and icons -->
+    <script src="../../assets/js/plugin/webfont/webfont.min.js"></script>
+    <script>
+        WebFont.load({
+            google: { "families": ["Lato:300,400,700,900"] },
+            custom: { "families": ["Flaticon", "Font Awesome 5 Solid", "Font Awesome 5 Regular", "Font Awesome 5 Brands", "simple-line-icons"], urls: ['../../assets/css/fonts.min.css'] },
+            active: function () {
+                sessionStorage.fonts = true;
+            }
+        });
+    </script>
+    <!-- CSS Files -->
+    <link rel="stylesheet" href="../../assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../../assets/css/atlantis.min.css">
+    <!-- CSS Just for demo purpose, don't include it in your project -->
+    <link rel="stylesheet" href="../../assets/css/demo.css">
+</head>
+
+<body>
+    <div class="wrapper">
+        <!-- header -->
+        <header-component></header-component>
+        <!-- header -->
+        <div class="main-panel">
+            <div class="content">
+                <div class="page-inner">
+                    <h4 class="page-title"></h4>
+                    <!-- <div class="page-category">Simple yet flexible JavaScript charting for designers & developers.
+                        Please checkout their <a href="https://www.chartjs.org/" target="_blank">full documentation</a>.
+                    </div> -->
+                    <h2>Similiar Symptom Recoveries</h2>
+                    <hr>
+                    <div class="row">
+                        <div class="col-sm-6 col-md-4">
+                            <div class="card card-stats card-primary card-round">
+                                <div class="card-body">
+                                    <div class="row">
+                                        <div class="col-5">
+                                            <div class="icon-big text-center">
+                                                <i class="la flaticon-stopwatch"></i>
+                                            </div>
+                                        </div>
+                                        <div class="col-7 col-stats">
+                                            <div class="numbers">
+                                                <p class="card-category">Fever</p>
+                                                <h4 class="card-title" id="ir-fever"></h4>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-6 col-md-4">
+                            <div class="card card-stats card-info card-round">
+                                <div class="card-body">
+                                    <div class="row">
+                                        <div class="col-5">
+                                            <div class="icon-big text-center">
+                                                <i class="la flaticon-stopwatch"></i>
+                                            </div>
+                                        </div>
+                                        <div class="col-7 col-stats">
+                                            <div class="numbers">
+                                                <p class="card-category">Cough</p>
+                                                <h4 class="card-title" id="ir-cough"></h4>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-6 col-md-4">
+                            <div class="card card-stats card-success card-round">
+                                <div class="card-body ">
+                                    <div class="row">
+                                        <div class="col-5">
+                                            <div class="icon-big text-center">
+                                                <i class="la flaticon-stopwatch"></i>
+                                            </div>
+                                        </div>
+                                        <div class="col-7 col-stats">
+                                            <div class="numbers">
+                                                <p class="card-category">Body Pains</p>
+                                                <h4 class="card-title" id="ir-bodypains"></h4>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <hr>
+                    <h2>Recommendations</h2>
+                    <hr>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="card full-height">
+                                <div class="card-body">
+                                    <ol class="activity-feed">
+                                        <li class="feed-item feed-item-secondary">
+                                            <time class="date" datetime="9-25">Food</time>
+                                            <span class="text">We Recommend you to take <a href="#" id="ir-food"
+                                                    style=" text-transform: uppercase;"></a></span>
+                                        </li>
+                                        <li class="feed-item feed-item-success">
+                                            <time class="date" datetime="9-24">Hospital</time>
+                                            <span class="text">We Recommend you to go to <a href="#" id="ir-hospital"
+                                                    style=" text-transform: uppercase;"></a></span>
+                                        </li>
+                                        <li class="feed-item feed-item-info">
+                                            <time class="date" datetime="9-23">Music</time>
+                                            <span class="text">We Recommend you to Listen to <a href="#" id="ir-music"
+                                                    style=" text-transform: uppercase;"></a></span>
+                                        </li>
+                                    </ol>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="card full-height">
+                                <div class="card-body">
+                                    <ol class="activity-feed">
+                                        <li class="feed-item feed-item-warning">
+                                            <time class="date" datetime="9-21">Book</time>
+                                            <span class="text">We Recommend you to read <a href="#" id="ir-book"
+                                                    style=" text-transform: uppercase;">
+                                                </a></span>
+                                        </li>
+                                        <li class="feed-item feed-item-danger">
+                                            <time class="date" datetime="9-18">Drink</time>
+                                            <span class="text">We Recommend you to have <a href="#" id="ir-drink"
+                                                    style=" text-transform: uppercase;"></a></span>
+                                        </li>
+                                        <li class="feed-item">
+                                            <time class="date" datetime="9-17">Quote</time>
+                                            <span class="text">A special quote for you <a href="" id="ir-quote"
+                                                    style=" text-transform: uppercase;"></a></span>
+                                        </li>
+                                    </ol>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="select-values mb-5" id="analysisQA">
+                        <h2>Select and Get Suggestion</h2>
+                        <hr>
+                        <div class="row">
+                            <div class="col-md-3">
+                                <div class="form-group">
+                                    <label for="defaultSelect">Breathing Problem</label>
+                                    <select class="form-control form-control" id="BreathingProblem">
+                                        <option disabled hidden selected>Select</option>
+                                        <option value="0">No</option>
+                                        <option value="1">Yes</option>
+                                    </select>
+                                </div>
+                                <div class="form-group">
+                                    <label for="defaultSelect">Fever</label>
+                                    <select class="form-control form-control" id="Fever">
+                                        <option disabled hidden selected>Select</option>
+                                        <option value="0">No</option>
+                                        <option value="1">Yes</option>
+                                    </select>
+                                </div>
+                                <div class="form-group">
+                                    <label for="defaultSelect">Dry Cough</label>
+                                    <select class="form-control form-control" id="DryCough">
+                                        <option disabled hidden selected>Select</option>
+                                        <option value="0">No</option>
+                                        <option value="1">Yes</option>
+                                    </select>
+                                </div>
+                                <div class="form-group">
+                                    <label for="defaultSelect">Sore Throat</label>
+                                    <select class="form-control form-control" id="Sorethroat">
+                                        <option disabled hidden selected>Select</option>
+                                        <option value="0">No</option>
+                                        <option value="1">Yes</option>
+                                    </select>
+                                </div>
+                                <div class="form-group">
+                                    <label for="defaultSelect">Running Nose</label>
+                                    <select class="form-control form-control" id="RunningNose">
+                                        <option disabled hidden selected>Select</option>
+                                        <option value="0">No</option>
+                                        <option value="1">Yes</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="col-md-3">
+                                <div class="form-group">
+                                    <label for="defaultSelect">Fatigue</label>
+                                    <select class="form-control form-control" id="Fatigue">
+                                        <option disabled hidden selected>Select</option>
+                                        <option value="0">No</option>
+                                        <option value="1">Yes</option>
+                                    </select>
+                                </div>
+                                <div class="form-group">
+                                    <label for="defaultSelect">Gastrointestinal</label>
+                                    <select class="form-control form-control" id="Gastrointestinal">
+                                        <option disabled hidden selected>Select</option>
+                                        <option value="0">No</option>
+                                        <option value="1">Yes</option>
+                                    </select>
+                                </div>
+                                <div class="form-group">
+                                    <label for="defaultSelect">Abroad Travel</label>
+                                    <select class="form-control form-control" id="Abroadtravel">
+                                        <option disabled hidden selected>Select</option>
+                                        <option value="0">No</option>
+                                        <option value="1">Yes</option>
+                                    </select>
+                                </div>
+                                <div class="form-group">
+                                    <label for="defaultSelect">Contact with COVID Patient</label>
+                                    <select class="form-control form-control" id="ContactwithCOVIDPatient">
+                                        <option disabled hidden selected>Select</option>
+                                        <option value="0">No</option>
+                                        <option value="1">Yes</option>
+                                    </select>
+                                </div>
+                                <div class="form-group">
+                                    <label for="defaultSelect">Attended Large Gathering</label>
+                                    <select class="form-control form-control" id="AttendedLargeGathering">
+                                        <option disabled hidden selected>Select</option>
+                                        <option value="0">No</option>
+                                        <option value="1">Yes</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="col-md-3">
+                                <div class="form-group">
+                                    <label for="defaultSelect">Asthma</label>
+                                    <select class="form-control form-control" id="Asthma">
+                                        <option disabled hidden selected>Select</option>
+                                        <option value="0">No</option>
+                                        <option value="1">Yes</option>
+                                    </select>
+                                </div>
+                                <div class="form-group">
+                                    <label for="defaultSelect">Headache</label>
+                                    <select class="form-control form-control" id="Headache">
+                                        <option disabled hidden selected>Select</option>
+                                        <option value="0">No</option>
+                                        <option value="1">Yes</option>
+                                    </select>
+                                </div>
+                                <div class="form-group">
+                                    <label for="defaultSelect">Heart Disease</label>
+                                    <select class="form-control form-control" id="HeartDisease">
+                                        <option disabled hidden selected>Select</option>
+                                        <option value="0">No</option>
+                                        <option value="1">Yes</option>
+                                    </select>
+                                </div>
+                                <div class="form-group">
+                                    <label for="defaultSelect">Diabetes</label>
+                                    <select class="form-control form-control" id="Diabetes">
+                                        <option disabled hidden selected>Select</option>
+                                        <option value="0">No</option>
+                                        <option value="1">Yes</option>
+                                    </select>
+                                </div>
+                                <div class="form-group">
+                                    <label for="defaultSelect">Hyper Tension</label>
+                                    <select class="form-control form-control" id="HyperTension">
+                                        <option disabled hidden selected>Select</option>
+                                        <option value="0">No</option>
+                                        <option value="1">Yes</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="col-md-3">
+                                <div class="form-group">
+                                    <label for="defaultSelect">Family working in Public Exposed Places</label>
+                                    <select class="form-control form-control" id="FamilyworkinginPublic">
+                                        <option disabled hidden selected>Select</option>
+                                        <option value="0">No</option>
+                                        <option value="1">Yes</option>
+                                    </select>
+                                </div>
+                                <div class="form-group">
+                                    <label for="defaultSelect">Visited Public Exposed Places</label>
+                                    <select class="form-control form-control" id="VisitedPublicExposedPlaces">
+                                        <option disabled hidden selected>Select</option>
+                                        <option value="0">No</option>
+                                        <option value="1">Yes</option>
+                                    </select>
+                                </div>
+                                <div class="form-group">
+                                    <label for="defaultSelect">Wearing Masks</label>
+                                    <select class="form-control form-control" id="WearingMasks">
+                                        <option disabled hidden selected>Select</option>
+                                        <option value="0">No</option>
+                                        <option value="1">Yes</option>
+                                    </select>
+                                </div>
+                                <div class="form-group">
+                                    <label for="defaultSelect">Sanitization from Market</label>
+                                    <select class="form-control form-control" id="SanitizationfromMarket">
+                                        <option disabled hidden selected>Select</option>
+                                        <option value="0">No</option>
+                                        <option value="1">Yes</option>
+                                    </select>
+                                </div>
+                                <div class="form-group">
+                                    <label for="defaultSelect">Chronic Lung Disease</label>
+                                    <select class="form-control form-control" id="ChronicLungDisease">
+                                        <option disabled hidden selected>Select</option>
+                                        <option value="0">No</option>
+                                        <option value="1">Yes</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+
+                        <button class="btn btn-success btn-lg col-md-12" type="submit"
+                            onclick="hideAnalysisQA()">Submit</button>
+                    </div>
+                    <div class="row" id="analysis-report">
+
+                    </div>
+
+                    <hr>
+                    <h2>Recommended Recovered Stories</h2>
+                    <hr>
+                    <div class="row" id="ir-stories-card">
+                        <div>
+
+                        </div>
+                    </div>
+
+                    <h2>Relax with these</h2>
+                    <hr>
+                    <div class="row">
+                        <div class="col">
+                            <iframe width="380" height="230" src="https://www.youtube.com/embed/G52dUQLxPzg"
+                                title="YouTube video player" frameborder="0"
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                allowfullscreen></iframe>
+                        </div>
+                        <div class="col">
+                            <iframe width=" 380" height="230" src="https://www.youtube.com/embed/yHywstX5irE"
+                                title="YouTube video player" frameborder="0"
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                allowfullscreen></iframe>
+                        </div>
+                        <div class="col">
+                            <iframe width=" 380" height="230" src="https://www.youtube.com/embed/inpok4MKVLM"
+                                title="YouTube video player" frameborder="0"
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                allowfullscreen></iframe>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+            </div>
+            <footer-component></footer-component>
+        </div>
+
+        <!-- Custom template | don't include it in your project! -->
+        <div class="custom-template">
+            <div class="title">Settings</div>
+            <div class="custom-content">
+                <div class="switcher">
+                    <!-- <div class="switch-block">
+                        <h4>Logo Header</h4>
+                        <div class="btnSwitch">
+                            <button type="button" class="changeLogoHeaderColor" data-color="dark"></button>
+                            <button type="button" class="selected changeLogoHeaderColor" data-color="blue"></button>
+                            <button type="button" class="changeLogoHeaderColor" data-color="purple"></button>
+                            <button type="button" class="changeLogoHeaderColor" data-color="light-blue"></button>
+                            <button type="button" class="changeLogoHeaderColor" data-color="green"></button>
+                            <button type="button" class="changeLogoHeaderColor" data-color="orange"></button>
+                            <button type="button" class="changeLogoHeaderColor" data-color="red"></button>
+                            <button type="button" class="changeLogoHeaderColor" data-color="white"></button>
+                            <br />
+                            <button type="button" class="changeLogoHeaderColor" data-color="dark2"></button>
+                            <button type="button" class="changeLogoHeaderColor" data-color="blue2"></button>
+                            <button type="button" class="changeLogoHeaderColor" data-color="purple2"></button>
+                            <button type="button" class="changeLogoHeaderColor" data-color="light-blue2"></button>
+                            <button type="button" class="changeLogoHeaderColor" data-color="green2"></button>
+                            <button type="button" class="changeLogoHeaderColor" data-color="orange2"></button>
+                            <button type="button" class="changeLogoHeaderColor" data-color="red2"></button>
+                        </div>
+                    </div> -->
+                    <div class="switch-block">
+                        <h4>Navbar Header</h4>
+                        <div class="btnSwitch">
+                            <button type="button" class="changeTopBarColor" data-color="dark"></button>
+                            <button type="button" class="changeTopBarColor" data-color="blue"></button>
+                            <button type="button" class="changeTopBarColor" data-color="purple"></button>
+                            <button type="button" class="changeTopBarColor" data-color="light-blue"></button>
+                            <button type="button" class="changeTopBarColor" data-color="green"></button>
+                            <button type="button" class="changeTopBarColor" data-color="orange"></button>
+                            <button type="button" class="changeTopBarColor" data-color="red"></button>
+                            <button type="button" class="changeTopBarColor" data-color="white"></button>
+                            <br />
+                            <button type="button" class="changeTopBarColor" data-color="dark2"></button>
+                            <button type="button" class="selected changeTopBarColor" data-color="blue2"></button>
+                            <button type="button" class="changeTopBarColor" data-color="purple2"></button>
+                            <button type="button" class="changeTopBarColor" data-color="light-blue2"></button>
+                            <button type="button" class="changeTopBarColor" data-color="green2"></button>
+                            <button type="button" class="changeTopBarColor" data-color="orange2"></button>
+                            <button type="button" class="changeTopBarColor" data-color="red2"></button>
+                        </div>
+                    </div>
+                    <div class="switch-block">
+                        <h4>Sidebar</h4>
+                        <div class="btnSwitch">
+                            <button type="button" class="selected changeSideBarColor" data-color="white"></button>
+                            <button type="button" class="changeSideBarColor" data-color="dark"></button>
+                            <button type="button" class="changeSideBarColor" data-color="dark2"></button>
+                        </div>
+                    </div>
+                    <div class="switch-block">
+                        <h4>Background</h4>
+                        <div class="btnSwitch">
+                            <button type="button" class="changeBackgroundColor" data-color="bg2"></button>
+                            <button type="button" class="changeBackgroundColor selected" data-color="bg1"></button>
+                            <button type="button" class="changeBackgroundColor" data-color="bg3"></button>
+                            <button type="button" class="changeBackgroundColor" data-color="dark"></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- <div class="custom-toggle">
+                <i class="flaticon-settings"></i>
+            </div> -->
+        </div>
+        <!-- End Custom template -->
+    </div>
+    <!--   Core JS Files   -->
+    <script src="../../assets/js/core/jquery.3.2.1.min.js"></script>
+    <script src="../../assets/js/core/popper.min.js"></script>
+    <script src="../../assets/js/core/bootstrap.min.js"></script>
+    <!-- jQuery UI -->
+    <script src="../../assets/js/plugin/jquery-ui-1.12.1.custom/jquery-ui.min.js"></script>
+    <script src="../../assets/js/plugin/jquery-ui-touch-punch/jquery.ui.touch-punch.min.js"></script>
+    <!-- Chart JS -->
+    <script src="../../assets/js/plugin/chart.js/chart.min.js"></script>
+
+    <!-- jQuery Scrollbar -->
+    <script src="../../assets/js/plugin/jquery-scrollbar/jquery.scrollbar.min.js"></script>
+    <!-- Atlantis JS -->
+    <script src="../../assets/js/atlantis.min.js"></script>
+    <!-- Atlantis DEMO methods, don't include it in your project! -->
+    <script src="../../assets/js/setting-demo2.js"></script>
+    <script>
+        var lineChart = document.getElementById('lineChart').getContext('2d'),
+            barChart = document.getElementById('barChart').getContext('2d'),
+            pieChart = document.getElementById('pieChart').getContext('2d'),
+            doughnutChart = document.getElementById('doughnutChart').getContext('2d'),
+            bubbleChart = document.getElementById('bubbleChart').getContext('2d'),
+            htmlLegendsChart = document.getElementById('htmlLegendsChart').getContext('2d');
+
+        var myLineChart = new Chart(lineChart, {
+            type: 'bar',
+            data: {
+                labels: ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug"],
+                datasets: [{
+                    label: "Recovered",
+                    backgroundColor: 'rgb(23, 125, 255)',
+                    borderColor: 'rgb(23, 125, 255)',
+                    data: [30000, 72000, 92000, 53000, 44000, 65000, 40000, 60000],
+                }],
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                scales: {
+                    yAxes: [{
+                        ticks: {
+                            beginAtZero: true
+                        }
+                    }]
+                },
+                layout: {
+                    padding: { left: 15, right: 15, top: 15, bottom: 15 }
+                }
+            }
+        });
+
+        var myBarChart = new Chart(barChart, {
+            type: 'bar',
+            data: {
+                labels: ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug"],
+                datasets: [{
+                    label: "Covid Varients",
+                    backgroundColor: 'rgb(23, 125, 255)',
+                    borderColor: 'rgb(23, 125, 255)',
+                    data: [3, 2, 6, 8, 4, 6, 4, 6],
+                }],
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                scales: {
+                    yAxes: [{
+                        ticks: {
+                            beginAtZero: true
+                        }
+                    }]
+                },
+                layout: {
+                    padding: { left: 15, right: 15, top: 15, bottom: 15 }
+                }
+            }
+        });
+
+        var myPieChart = new Chart(pieChart, {
+            type: 'pie',
+            data: {
+                datasets: [{
+                    data: [50, 35, 15],
+                    backgroundColor: ["#1d7af3", "#f3545d", "#fdaf4b"],
+                    borderWidth: 0
+                }],
+                labels: ['Cold/Cough', 'Fever', 'Headache']
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                legend: {
+                    position: 'bottom',
+                    labels: {
+                        fontColor: 'rgb(154, 154, 154)',
+                        fontSize: 11,
+                        usePointStyle: true,
+                        padding: 20
+                    }
+                },
+                pieceLabel: {
+                    render: 'percentage',
+                    fontColor: 'white',
+                    fontSize: 14,
+                },
+                tooltips: false,
+                layout: {
+                    padding: {
+                        left: 20,
+                        right: 20,
+                        top: 20,
+                        bottom: 20
+                    }
+                }
+            }
+        })
+
+        var myDoughnutChart = new Chart(doughnutChart, {
+            type: 'doughnut',
+            data: {
+                datasets: [{
+                    data: [10, 20, 30],
+                    backgroundColor: ['#f3545d', '#fdaf4b', '#1d7af3']
+                }],
+
+                labels: [
+                    'Fever',
+                    'Cold/Cough',
+                    'No Taste/Smell',
+                ]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                legend: {
+                    position: 'bottom'
+                },
+                layout: {
+                    padding: {
+                        left: 20,
+                        right: 20,
+                        top: 20,
+                        bottom: 20
+                    }
+                }
+            }
+        });
+
+        var myBubbleChart = new Chart(bubbleChart, {
+            type: 'bubble',
+            data: {
+                datasets: [{
+                    label: "Non Active",
+                    data: [{ x: 25, y: 17, r: 25 }, { x: 30, y: 25, r: 28 }, { x: 35, y: 30, r: 8 }],
+                    backgroundColor: "#716aca"
+                },
+                {
+                    label: "Active",
+                    data: [{ x: 10, y: 17, r: 20 }, { x: 30, y: 10, r: 7 }, { x: 35, y: 20, r: 10 }],
+                    backgroundColor: "#1d7af3"
+                }],
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                legend: {
+                    position: 'bottom'
+                },
+                scales: {
+                    yAxes: [{
+                        ticks: {
+                            beginAtZero: true
+                        }
+                    }],
+                    xAxes: [{
+                        ticks: {
+                            beginAtZero: true
+                        }
+                    }]
+                },
+            }
+        });
+
+        // Chart with HTML Legends
+
+        var gradientStroke = htmlLegendsChart.createLinearGradient(500, 0, 100, 0);
+        gradientStroke.addColorStop(0, '#177dff');
+        gradientStroke.addColorStop(1, '#80b6f4');
+
+        var gradientFill = htmlLegendsChart.createLinearGradient(500, 0, 100, 0);
+        gradientFill.addColorStop(0, "rgba(23, 125, 255, 0.7)");
+        gradientFill.addColorStop(1, "rgba(128, 182, 244, 0.3)");
+
+        var gradientStroke2 = htmlLegendsChart.createLinearGradient(500, 0, 100, 0);
+        gradientStroke2.addColorStop(0, '#f3545d');
+        gradientStroke2.addColorStop(1, '#ff8990');
+
+        var gradientFill2 = htmlLegendsChart.createLinearGradient(500, 0, 100, 0);
+        gradientFill2.addColorStop(0, "rgba(243, 84, 93, 0.7)");
+        gradientFill2.addColorStop(1, "rgba(255, 137, 144, 0.3)");
+
+        var gradientStroke3 = htmlLegendsChart.createLinearGradient(500, 0, 100, 0);
+        gradientStroke3.addColorStop(0, '#fdaf4b');
+        gradientStroke3.addColorStop(1, '#ffc478');
+
+        var gradientFill3 = htmlLegendsChart.createLinearGradient(500, 0, 100, 0);
+        gradientFill3.addColorStop(0, "rgba(253, 175, 75, 0.7)");
+        gradientFill3.addColorStop(1, "rgba(255, 196, 120, 0.3)");
+
+        var gradientStroke4 = htmlLegendsChart.createLinearGradient(500, 0, 100, 0);
+        gradientStroke4.addColorStop(0, '#B79891');
+        gradientStroke4.addColorStop(1, '#B79899');
+
+        var gradientFill4 = htmlLegendsChart.createLinearGradient(500, 0, 100, 0);
+        gradientFill4.addColorStop(0, "rgba(253, 175, 75, 0.7)");
+        gradientFill4.addColorStop(1, "rgba(255, 196, 120, 0.3)");
+
+        var gradientStroke5 = htmlLegendsChart.createLinearGradient(500, 0, 100, 0);
+        gradientStroke5.addColorStop(0, '#788dff');
+        gradientStroke5.addColorStop(1, '#788dff');
+
+        var gradientFill5 = htmlLegendsChart.createLinearGradient(500, 0, 100, 0);
+        gradientFill5.addColorStop(0, "rgba(253, 175, 75, 0.7)");
+        gradientFill5.addColorStop(1, "rgba(255, 196, 120, 0.3)");
+
+        var myHtmlLegendsChart = new Chart(htmlLegendsChart, {
+            type: 'line',
+            data: {
+                labels: ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug"],
+                datasets: [{
+                    label: "HeadAche",
+                    borderColor: gradientStroke2,
+                    pointBackgroundColor: gradientStroke2,
+                    pointRadius: 0,
+                    backgroundColor: gradientFill2,
+                    legendColor: '#f3545d',
+                    fill: true,
+                    borderWidth: 1,
+                    data: [15400, 18400, 17500, 20030, 12010, 13100, 24000, 2878]
+                }, {
+                    label: "Cold",
+                    borderColor: gradientStroke3,
+                    pointBackgroundColor: gradientStroke3,
+                    pointRadius: 0,
+                    backgroundColor: gradientFill3,
+                    legendColor: '#fdaf4b',
+                    fill: true,
+                    borderWidth: 1,
+                    data: [25600, 23000, 20405, 2087, 12040, 25000, 2030, 1295]
+                }, {
+                    label: "Fever",
+                    borderColor: gradientStroke,
+                    pointBackgroundColor: gradientStroke,
+                    pointRadius: 0,
+                    backgroundColor: gradientFill,
+                    legendColor: '#177dff',
+                    fill: true,
+                    borderWidth: 1,
+                    data: [5402, 4800, 4300, 1550, 50030, 40530, 1900, 40800]
+                },
+                {
+                    label: "Diarrhoea",
+                    borderColor: gradientStroke4,
+                    pointBackgroundColor: gradientStroke4,
+                    pointRadius: 0,
+                    backgroundColor: gradientFill4,
+                    legendColor: '#B79891',
+                    fill: true,
+                    borderWidth: 1,
+                    data: [8900, 5800, 33000, 5500, 5030, 14503, 13800, 20100]
+                },
+                {
+                    label: "No Taste/Smell",
+                    borderColor: gradientStroke5,
+                    pointBackgroundColor: gradientStroke5,
+                    pointRadius: 0,
+                    backgroundColor: gradientFill5,
+                    legendColor: '#788dff',
+                    fill: true,
+                    borderWidth: 1,
+                    data: [9000, 48000, 40300, 5500, 45030, 10453, 32380, 20100]
+                }
+                ]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                legend: {
+                    display: false
+                },
+                tooltips: {
+                    bodySpacing: 4,
+                    mode: "nearest",
+                    intersect: 0,
+                    position: "nearest",
+                    xPadding: 10,
+                    yPadding: 10,
+                    caretPadding: 10
+                },
+                layout: {
+                    padding: { left: 15, right: 15, top: 15, bottom: 15 }
+                },
+                scales: {
+                    yAxes: [{
+                        ticks: {
+                            fontColor: "rgba(0,0,0,0.5)",
+                            fontStyle: "500",
+                            beginAtZero: false,
+                            maxTicksLimit: 5,
+                            padding: 20
+                        },
+                        gridLines: {
+                            drawTicks: false,
+                            display: false
+                        }
+                    }],
+                    xAxes: [{
+                        gridLines: {
+                            zeroLineColor: "transparent"
+                        },
+                        ticks: {
+                            padding: 20,
+                            fontColor: "rgba(0,0,0,0.5)",
+                            fontStyle: "500"
+                        }
+                    }]
+                },
+                legendCallback: function (chart) {
+                    var text = [];
+                    text.push('<ul class="' + chart.id + '-legend html-legend">');
+                    for (var i = 0; i < chart.data.datasets.length; i++) {
+                        text.push('<li><span style="background-color:' + chart.data.datasets[i].legendColor + '"></span>');
+                        if (chart.data.datasets[i].label) {
+                            text.push(chart.data.datasets[i].label);
+                        }
+                        text.push('</li>');
+                    }
+                    text.push('</ul>');
+                    return text.join('');
+                }
+            }
+        });
+
+        var myLegendContainer = document.getElementById("myChartLegend");
+
+        // generate HTML legend
+        myLegendContainer.innerHTML = myHtmlLegendsChart.generateLegend();
+
+        // bind onClick event to all LI-tags of the legend
+        var legendItems = myLegendContainer.getElementsByTagName('li');
+        for (var i = 0; i < legendItems.length; i += 1) {
+            legendItems[i].addEventListener("click", legendClickCallback, false);
+        }
+
+    </script>
+    <script src="../assets/js/header.js"></script>
+    <script src="../assets/js/footer.js"></script>
+    <script>
+        var path = window.location.pathname.split('demo1/');
+
+        if (path.length === 2) {
+            $('.analysis').addClass('active');
+        }
+
+        var baseUrl = 'https://cors-anywhere.herokuapp.com/http://ec2-65-0-181-95.ap-south-1.compute.amazonaws.com:7878';
+        fetch(baseUrl + '/api/suggestions/recoveredcount')
+            .then(response => response.json())
+            .then(data => {
+                document.getElementById('ir-fever').textContent = data.fever
+                document.getElementById('ir-cough').textContent = data.cough
+                document.getElementById('ir-bodypains').textContent = data.bodypains
+            })
+
+        console.log(localStorage);
+
+        let userName = localStorage.getItem('name')
+        let professionName = localStorage.getItem('profession')
+        fetch(baseUrl + '/api/suggestions/category?name=' + userName + '&profession=' + professionName + '&suggestionfor=hospital')
+            .then(response => response.json())
+            .then(data => {
+                localStorage.setItem('hospitalData', JSON.stringify(data))
+                var jsonObject = JSON.parse(localStorage.getItem('hospitalData'));
+                document.getElementById('ir-hospital').textContent = jsonObject.hospital
+            })
+        fetch(baseUrl + '/api/suggestions/category?name=' + userName + '&profession=' + professionName + '&suggestionfor=food')
+            .then(response => response.json())
+            .then(data => {
+                localStorage.setItem('foodData', JSON.stringify(data))
+                var jsonObject = JSON.parse(localStorage.getItem('foodData'));
+                document.getElementById('ir-food').textContent = jsonObject.food
+                // console.log(dataObject.hospital);
+            })
+        fetch(baseUrl + '/api/suggestions/category?name=' + userName + '&profession=' + professionName + '&suggestionfor=music')
+            .then(response => response.json())
+            .then(data => {
+                localStorage.setItem('musicData', JSON.stringify(data))
+                var jsonObject = JSON.parse(localStorage.getItem('musicData'));
+                document.getElementById('ir-music').textContent = jsonObject.music
+                // console.log(dataObject.hospital);
+            });
+
+        fetch(baseUrl + '/api/suggestions/category?name=' + userName + '&profession=' + professionName + '&suggestionfor=book')
+            .then(response => response.json())
+            .then(data => {
+                localStorage.setItem('bookData', JSON.stringify(data))
+                var jsonObject = JSON.parse(localStorage.getItem('bookData'));
+                document.getElementById('ir-book').textContent = jsonObject.book
+
+                // console.log(dataObject.hospital);
+            })
+
+        fetch(baseUrl + '/api/suggestions/category?name=' + userName + '&profession=' + professionName + '&suggestionfor=drink')
+            .then(response => response.json())
+            .then(data => {
+                localStorage.setItem('drinkData', JSON.stringify(data))
+                var jsonObject = JSON.parse(localStorage.getItem('drinkData'));
+                document.getElementById('ir-drink').textContent = jsonObject.drink
+                // console.log(dataObject.hospital);
+            })
+        fetch(baseUrl + '/api/suggestions/category?name=' + userName + '&profession=' + professionName + '&suggestionfor=quote')
+            .then(response => response.json())
+            .then(data => {
+                localStorage.setItem('quoteData', JSON.stringify(data))
+                var jsonObject = JSON.parse(localStorage.getItem('quoteData'));
+                document.getElementById('ir-quote').textContent = jsonObject.quote
+                // console.log(dataObject.hospital);
+            })
+
+        let userId = localStorage.getItem('id');
+        fetch(baseUrl + '/api/userblog/user/' + userId + '/')
+            .then(response => response.json())
+            .then(data => {
+                console.log(data);
+            })
+
+        var x = document.getElementById("analysisQA");
+        let breathSelect = document.getElementById('BreathingProblem')
+        let breathValue;
+        breathSelect.addEventListener('change', () => {
+            breathValue = (breathSelect.selectedIndex) - 1;
+            breathValue = breathValue.toString()
+            console.log(breathValue);
+            console.log("hello" + breathValue + "");
+        });
+        let FeverSelect = document.getElementById('Fever')
+        let FeverValue;
+        FeverSelect.addEventListener('change', () => {
+            FeverValue = (FeverSelect.selectedIndex) - 1;
+            FeverValue = FeverValue.toString()
+            console.log(FeverValue);
+        });
+        let DryCoughSelect = document.getElementById('DryCough')
+        let DryCoughValue;
+        DryCoughSelect.addEventListener('change', () => {
+            DryCoughValue = (DryCoughSelect.selectedIndex) - 1;
+            DryCoughValue = DryCoughValue.toString()
+            console.log(DryCoughValue);
+        });
+        let SorethroatSelect = document.getElementById('Sorethroat')
+        let SorethroatValue;
+        SorethroatSelect.addEventListener('change', () => {
+            SorethroatValue = (SorethroatSelect.selectedIndex) - 1;
+            SorethroatValue = SorethroatValue.toString()
+            console.log(SorethroatValue);
+        });
+        let RunningNoseSelect = document.getElementById('RunningNose')
+        let RunningNoseValue;
+        RunningNoseSelect.addEventListener('change', () => {
+            RunningNoseValue = (RunningNoseSelect.selectedIndex) - 1;
+            RunningNoseValue = RunningNoseValue.toString()
+            console.log(RunningNoseValue);
+        });
+        let AsthmaSelect = document.getElementById('Asthma')
+        let AsthmaValue;
+        AsthmaSelect.addEventListener('change', () => {
+            AsthmaValue = (AsthmaSelect.selectedIndex) - 1;
+            AsthmaValue = AsthmaValue.toString()
+            console.log(AsthmaValue);
+        });
+        let ChronicLungDiseaseSelect = document.getElementById('ChronicLungDisease')
+        let ChronicLungDiseaseValue;
+        ChronicLungDiseaseSelect.addEventListener('change', () => {
+            ChronicLungDiseaseValue = (ChronicLungDiseaseSelect.selectedIndex) - 1;
+            ChronicLungDiseaseValue = ChronicLungDiseaseValue.toString()
+            console.log(ChronicLungDiseaseValue);
+        });
+        let HeadacheSelect = document.getElementById('Headache')
+        let HeadacheValue;
+        HeadacheSelect.addEventListener('change', () => {
+            HeadacheValue = (HeadacheSelect.selectedIndex) - 1;
+            HeadacheValue = HeadacheValue.toString()
+            console.log(HeadacheValue);
+        });
+        let HeartDiseaseSelect = document.getElementById('HeartDisease')
+        let HeartDiseaseValue;
+        HeartDiseaseSelect.addEventListener('change', () => {
+            HeartDiseaseValue = (HeartDiseaseSelect.selectedIndex) - 1;
+            HeartDiseaseValue = HeartDiseaseValue.toString()
+            console.log(HeartDiseaseValue);
+        });
+        let DiabetesSelect = document.getElementById('Diabetes')
+        let DiabetesValue;
+        DiabetesSelect.addEventListener('change', () => {
+            DiabetesValue = (DiabetesSelect.selectedIndex) - 1;
+            DiabetesValue = DiabetesValue.toString()
+            console.log(DiabetesValue);
+        });
+        let HyperTensionSelect = document.getElementById('HyperTension')
+        let HyperTensionValue;
+        HyperTensionSelect.addEventListener('change', () => {
+            HyperTensionValue = (HyperTensionSelect.selectedIndex) - 1;
+            HyperTensionValue = HyperTensionValue.toString()
+            console.log(HyperTensionValue);
+        });
+        let FatigueSelect = document.getElementById('Fatigue')
+        let FatigueValue;
+        FatigueSelect.addEventListener('change', () => {
+            FatigueValue = (FatigueSelect.selectedIndex) - 1;
+            FatigueValue = FatigueValue.toString()
+            console.log(FatigueValue);
+        });
+        let GastrointestinalSelect = document.getElementById('Gastrointestinal')
+        let GastrointestinalValue;
+        GastrointestinalSelect.addEventListener('change', () => {
+            GastrointestinalValue = (GastrointestinalSelect.selectedIndex) - 1;
+            GastrointestinalValue = GastrointestinalValue.toString()
+            console.log(GastrointestinalValue);
+        });
+        let AbroadtravelSelect = document.getElementById('Abroadtravel')
+        let AbroadtravelValue;
+        AbroadtravelSelect.addEventListener('change', () => {
+            AbroadtravelValue = (AbroadtravelSelect.selectedIndex) - 1;
+            AbroadtravelValue = AbroadtravelValue.toString()
+            console.log(AbroadtravelValue);
+        });
+        let ContactwithCOVIDPatientSelect = document.getElementById('ContactwithCOVIDPatient')
+        let ContactwithCOVIDPatientValue;
+        ContactwithCOVIDPatientSelect.addEventListener('change', () => {
+            ContactwithCOVIDPatientValue = (ContactwithCOVIDPatientSelect.selectedIndex) - 1;
+            ContactwithCOVIDPatientValue = ContactwithCOVIDPatientValue.toString()
+            console.log(ContactwithCOVIDPatientValue);
+        });
+        let AttendedLargeGatheringSelect = document.getElementById('AttendedLargeGathering')
+        let AttendedLargeGatheringValue;
+        AttendedLargeGatheringSelect.addEventListener('change', () => {
+            AttendedLargeGatheringValue = (AttendedLargeGatheringSelect.selectedIndex) - 1;
+            AttendedLargeGatheringValue = AttendedLargeGatheringValue.toString()
+            console.log(AttendedLargeGatheringValue);
+        });
+        let VisitedPublicExposedPlacesSelect = document.getElementById('VisitedPublicExposedPlaces')
+        let VisitedPublicExposedPlacesValue;
+        VisitedPublicExposedPlacesSelect.addEventListener('change', () => {
+            VisitedPublicExposedPlacesValue = (VisitedPublicExposedPlacesSelect.selectedIndex) - 1;
+            VisitedPublicExposedPlacesValue = VisitedPublicExposedPlacesValue.toString()
+            console.log(VisitedPublicExposedPlacesValue);
+        });
+        let FamilyworkinginPublicSelect = document.getElementById('FamilyworkinginPublic')
+        let FamilyworkinginPublicValue;
+        FamilyworkinginPublicSelect.addEventListener('change', () => {
+            FamilyworkinginPublicValue = (FamilyworkinginPublicSelect.selectedIndex) - 1;
+            FamilyworkinginPublicValue = FamilyworkinginPublicValue.toString()
+            console.log(FamilyworkinginPublicValue);
+        });
+        let WearingMasksSelect = document.getElementById('WearingMasks')
+        let WearingMasksValue;
+        WearingMasksSelect.addEventListener('change', () => {
+            WearingMasksValue = (WearingMasksSelect.selectedIndex) - 1;
+            WearingMasksValue = WearingMasksValue.toString()
+            console.log(WearingMasksValue);
+        });
+        let SanitizationfromMarketSelect = document.getElementById('SanitizationfromMarket')
+        let SanitizationfromMarketValue;
+        SanitizationfromMarketSelect.addEventListener('change', () => {
+            SanitizationfromMarketValue = (SanitizationfromMarketSelect.selectedIndex) - 1;
+            SanitizationfromMarketValue = SanitizationfromMarketValue.toString()
+            console.log(SanitizationfromMarketValue);
+        });
+
+        function hideAnalysisQA() {
+
+            // Analysis-report
+
+            let requestData = {
+                "Breathing Problem": "" + breathValue + "",
+                "Fever": "" + FeverValue + "",
+                "Dry Cough": "" + DryCoughValue + "",
+                "Sore throat": "" + SorethroatValue + "",
+                "Running Nose": "" + RunningNoseValue + "",
+                "Asthma": "" + AsthmaValue + "",
+                "Chronic Lung Disease": "" + ChronicLungDiseaseValue + "",
+                "Headache": "" + HeadacheValue + "",
+                "Heart Disease": "" + HeartDiseaseValue + "",
+                "Diabetes": "" + DiabetesValue + "",
+                "Hyper Tension": "" + HyperTensionValue + "",
+                "Fatigue ": "" + FatigueValue + "",
+                "Gastrointestinal ": "" + GastrointestinalValue + "",
+                "Abroad travel": "" + AbroadtravelValue + "",
+                "Contact with COVID Patient": "" + ContactwithCOVIDPatientValue + "",
+                "Attended Large Gathering": "" + AttendedLargeGatheringValue + "",
+                "Visited Public Exposed Places": "" + VisitedPublicExposedPlacesValue + "",
+                "Family working in Public Exposed Places": "" + FamilyworkinginPublicValue + "",
+                "Wearing Masks": "" + WearingMasksValue + "",
+                "Sanitization from Market": "" + SanitizationfromMarketValue + ""
+            }
+
+            console.log(requestData);
+            fetch("https://irecovered.herokuapp.com/checkForSeverity", {
+                method: "POST",
+                headers: {
+                    'Accept': 'application/json',
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify(requestData)
+            }).then(res => res.text())
+                .then(function (data) {
+                    console.log(data);
+                    document.getElementById("analysis-report").innerHTML += `
+                <div class="col-md-12">
+                            <div class="card">
+                                <div class="card-body" style="background:#31CE36; color:#FFFFFF;text-transform: uppercase;">
+                                    <h2>${data}</h2>
+                                </div>
+                            </div>
+                        </div>
+                        <hr>
+                `
+                });
+
+            // console.log(analysisReportText);
+            if (x.style.display === "none") {
+                console.log("None");
+            } else {
+                x.style.display = "none";
+            }
+        }
+
+
+        fetch(baseUrl + '/api/suggestions/recoveredlist?hashTag=fever')
+            .then(response => response.json())
+            .then(data => {
+                console.log(data);
+                data.slice(0, 3).forEach(story => {
+
+                    document.getElementById('ir-stories-card').innerHTML += `
+                    <div class="col-md-4">
+                                <div class="card card-post card-round">
+                                    <img class="card-img-top" src="${story.profileImageUrl}" alt="Card image cap" style="height: 200px">
+                                    <div class="card-body">
+                                        <div class="d-flex">
+                                            <div class="info-post ml-2">
+                                                <p class="username">by: <b>${story.userId.name}</b></p>
+                                            </div>
+                                        </div>
+                                        <div class="separator-solid"></div>
+                                        <h3 class="card-title">
+                                            <a href="#">
+                                                ${story.title}
+                                            </a>
+                                        </h3>
+                                    </div>
+                                </div>
+                            </div>
+                    `
+
+                });
+            })
+
+    </script>
+
+
+</body>
+
+</html>
+
+<!-- {
+    "Breathing Problem": breathValue,
+    "Fever": FeverValue,
+    "Dry Cough": DryCoughValue,
+    "Sore throat": SorethroatValue,
+    "Running Nose": RunningNoseValue,
+    "Asthma": AsthmaValue,
+    "Chronic Lung Disease": ChronicLungDiseaseValue,
+    "Headache": HeadacheValue,
+    "Heart Disease": HeartDiseaseValue,
+    "Diabetes": DiabetesValue,
+    "Hyper Tension": HyperTensionValue,
+    "Fatigue ": FatigueValue,
+    "Gastrointestinal ": GastrointestinalValue,
+    "Abroad travel": AbroadtravelValue,
+    "Contact with COVID Patient": ContactwithCOVIDPatientValue,
+    "Attended Large Gathering": AttendedLargeGatheringValue,
+    "Visited Public Exposed Places": VisitedPublicExposedPlacesValue,
+    "Family working in Public Exposed Places": FamilyworkinginPublicValue,
+    "Wearing Masks": WearingMasksValue,
+    "Sanitization from Market": SanitizationfromMarketSelect
+} -->
